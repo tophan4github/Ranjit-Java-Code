@@ -28,7 +28,7 @@ stages{
 
         stage ('Deployments'){
             parallel{
-                stage ('Deploy to Staging'){
+                stage ('Deploy to the Staging'){
                     steps {
                         sh "scp **/*.war jenkins@${params.tomcat_stag}:/usr/share/tomcat/webapps/"
                     }
